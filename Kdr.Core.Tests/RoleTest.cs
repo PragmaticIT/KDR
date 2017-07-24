@@ -10,7 +10,7 @@ namespace Kdr.Core.Tests
         public void CanCheckIsAdmin()
         {
             var sut = Roles.Admin;
-            Assert.IsTrue((sut & Roles.Admin )== Roles.Admin);
+            Assert.IsTrue((sut & Roles.Admin) == Roles.Admin);
         }
     }
 }

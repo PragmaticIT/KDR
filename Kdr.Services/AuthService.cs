@@ -16,7 +16,7 @@ namespace Kdr.Services
         {
             return new ValidateOutput
             {
-                IsSuccess = input.Login.ToLower() == "jan" 
+                IsSuccess = input.Login.ToLower() == "jan"
                         && _hashingService.HashPassword(input.Password) == _hashingService.HashPassword("kowalski")
             };
         }

@@ -15,7 +15,8 @@ namespace Kdr.Core
     [Flags]
     public enum Roles
     {
-        User = 0,
-        Admin = 1
+        User = 4,
+        Admin = 1,
+        SuperAdmin = 2
     }
 }

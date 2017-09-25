@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kdr.Database.MongoDB", "Kdr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kdr.Services", "Kdr.Services\Kdr.Services.csproj", "{F8ADE35E-5B16-4286-99DA-1CAC7F023C47}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kdr.ServicesInitializer", "Kdr.ServicesInitializer\Kdr.ServicesInitializer.csproj", "{30510035-85C6-4290-8770-763619558A62}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{F8ADE35E-5B16-4286-99DA-1CAC7F023C47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8ADE35E-5B16-4286-99DA-1CAC7F023C47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8ADE35E-5B16-4286-99DA-1CAC7F023C47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30510035-85C6-4290-8770-763619558A62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30510035-85C6-4290-8770-763619558A62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30510035-85C6-4290-8770-763619558A62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30510035-85C6-4290-8770-763619558A62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -89,5 +95,6 @@ Global
 		{86B6FD73-71C0-4371-AA52-4CD2D1B307CF} = {A2DDACA3-6B13-4B12-8AEC-A7DAAFD4B435}
 		{586BF81C-45B2-4A55-B845-DE5D20232F16} = {2CD5704C-C4F5-4140-AFC5-F9B39C814E3B}
 		{F8ADE35E-5B16-4286-99DA-1CAC7F023C47} = {2CD5704C-C4F5-4140-AFC5-F9B39C814E3B}
+		{30510035-85C6-4290-8770-763619558A62} = {2CD5704C-C4F5-4140-AFC5-F9B39C814E3B}
 	EndGlobalSection
 EndGlobal

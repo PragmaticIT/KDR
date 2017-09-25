@@ -17,7 +17,7 @@ namespace Kdr.Services.Tests
             var sut = new AuthService(hashingService);
             var result = sut.Validate(new ValidateInput { Login = "jan", Password = "abc" });
 
-            Assert.IsTrue(result.IsSuccess);
+            Assert.IsFalse(result.IsSuccess);
         }
     }
 }

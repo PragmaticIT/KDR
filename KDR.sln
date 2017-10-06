@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.12
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_Infrastructure", "01_Infrastructure", "{9DA54C2D-6302-48FE-BAD7-D9C7EB1A6E6A}"
 EndProject
@@ -36,6 +36,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kdr.ServicesInitializer", "Kdr.ServicesInitializer\Kdr.ServicesInitializer.csproj", "{30510035-85C6-4290-8770-763619558A62}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kdr.Database.MongoDB.Tests", "Kdr.Database.MongoDB.Tests\Kdr.Database.MongoDB.Tests.csproj", "{D6D1009C-D1DC-42FA-8A48-7A3242C00A6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kdr.Database.LiteDb", "Kdr.Database.LiteDb\Kdr.Database.LiteDb.csproj", "{98DE5E1F-E7B9-4404-8B16-4257F4520CB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kdr.Database.LiteDb.Tests", "Kdr.Database.LiteDb.Tests\Kdr.Database.LiteDb.Tests.csproj", "{924CD39A-2116-4ED0-B038-83F23945A71B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +91,14 @@ Global
 		{D6D1009C-D1DC-42FA-8A48-7A3242C00A6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6D1009C-D1DC-42FA-8A48-7A3242C00A6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6D1009C-D1DC-42FA-8A48-7A3242C00A6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98DE5E1F-E7B9-4404-8B16-4257F4520CB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98DE5E1F-E7B9-4404-8B16-4257F4520CB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98DE5E1F-E7B9-4404-8B16-4257F4520CB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98DE5E1F-E7B9-4404-8B16-4257F4520CB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{924CD39A-2116-4ED0-B038-83F23945A71B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{924CD39A-2116-4ED0-B038-83F23945A71B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{924CD39A-2116-4ED0-B038-83F23945A71B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{924CD39A-2116-4ED0-B038-83F23945A71B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -103,5 +115,7 @@ Global
 		{F8ADE35E-5B16-4286-99DA-1CAC7F023C47} = {2CD5704C-C4F5-4140-AFC5-F9B39C814E3B}
 		{30510035-85C6-4290-8770-763619558A62} = {2CD5704C-C4F5-4140-AFC5-F9B39C814E3B}
 		{D6D1009C-D1DC-42FA-8A48-7A3242C00A6F} = {2CD5704C-C4F5-4140-AFC5-F9B39C814E3B}
+		{98DE5E1F-E7B9-4404-8B16-4257F4520CB6} = {2CD5704C-C4F5-4140-AFC5-F9B39C814E3B}
+		{924CD39A-2116-4ED0-B038-83F23945A71B} = {2CD5704C-C4F5-4140-AFC5-F9B39C814E3B}
 	EndGlobalSection
 EndGlobal

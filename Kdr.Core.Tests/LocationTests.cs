@@ -91,5 +91,29 @@ namespace Kdr.Core.Tests
             Assert.AreEqual(sut, new Location());
 
         }
+
+        [TestMethod]
+        public void CanCompareFilledToEmptyLocations()
+        {
+            var sut = new Location
+            {
+                Lat = "ABC",
+                Long = "XYZ"
+            };
+            Assert.AreNotEqual(sut, new Location());
+
+        }
+
+        [TestMethod]
+        public void CanCompareEmptyToFilledLocations()
+        {
+            var sut = new Location
+            {
+                Lat = "ABC",
+                Long = "XYZ"
+            };
+            Assert.AreNotEqual(new Location(), sut);
+
+        }
     }
 }

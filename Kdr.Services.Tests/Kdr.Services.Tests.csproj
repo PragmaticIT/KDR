@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AuthServiceTests.cs" />
+    <Compile Include="ComponentManagerTests.cs" />
     <Compile Include="HashingServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DependencyInjectionTests.cs" />
@@ -76,6 +77,10 @@
     <ProjectReference Include="..\Kdr.ServiceInterfaces\Kdr.ServiceInterfaces.csproj">
       <Project>{86b6fd73-71c0-4371-aa52-4cd2d1b307cf}</Project>
       <Name>Kdr.ServiceInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kdr.ServicesInitializer\Kdr.ServicesInitializer.csproj">
+      <Project>{30510035-85c6-4290-8770-763619558a62}</Project>
+      <Name>Kdr.ServicesInitializer</Name>
     </ProjectReference>
     <ProjectReference Include="..\Kdr.Services\Kdr.Services.csproj">
       <Project>{f8ade35e-5b16-4286-99da-1cac7f023c47}</Project>

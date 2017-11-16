@@ -19,5 +19,15 @@ namespace Kdr.Services.Tests
             var sut = new HashingService();
             Assert.AreEqual(result, sut.HashPassword(password));
         }
+
+        [TestMethod]
+        public void TestMethod2()
+        {
+            var sut = new AuthService2();
+            sut.HashingService = new HashingService();
+            var result = sut.Validate(new ServiceInterfaces.ValidateInput {Login="abc", Password="abc"});
+            Assert.AreNotEqual(true, result.IsSuccess);
+            
+        }
     }
 }

@@ -68,7 +68,8 @@ namespace Kdr.Services.Tests
             var sut = container.Resolve<IRepository>();
             var sut2 = container.Resolve<IRepository>();
             Assert.AreEqual(sut.Id, sut2.Id);
-            Assert.AreEqual(instance.Id, sut.Id);
+            Assert.AreEqual((instance as IRepository2).Id, sut.Id);
+            Assert.AreEqual(((IRepository2)instance).Id, sut.Id);
         }
 
         [TestMethod]

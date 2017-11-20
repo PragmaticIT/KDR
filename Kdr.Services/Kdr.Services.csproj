@@ -41,10 +41,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AuthService.cs" />
+    <Compile Include="CategoryService.cs" />
     <Compile Include="HashingService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Kdr.Core\Kdr.Core.csproj">
+      <Project>{C633603A-6376-4DE6-8019-1C56A0E5E85D}</Project>
+      <Name>Kdr.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Kdr.ServiceInterfaces\Kdr.ServiceInterfaces.csproj">
       <Project>{86b6fd73-71c0-4371-aa52-4cd2d1b307cf}</Project>
       <Name>Kdr.ServiceInterfaces</Name>

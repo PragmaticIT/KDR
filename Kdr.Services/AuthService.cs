@@ -7,6 +7,12 @@ namespace Kdr.Services
     {
         private readonly IHashingService _hashingService;
 
+        //Pure evil!
+        //public AuthService()
+        //{
+        //    _hashingService = new HashingService();
+        //}
+
         public AuthService(IHashingService hashingService)
         {
             _hashingService = hashingService;
@@ -22,6 +28,7 @@ namespace Kdr.Services
         }
     }
 
+    //Initialization by Factory pattern
     public static class MyFactory
     {
         public static IHashingService GetHashingService()
@@ -35,12 +42,17 @@ namespace Kdr.Services
         }
     }
 
+    //Initialization by property
     public class AuthService2 : IAuthService
     {
         public IHashingService HashingService { get; set; }
 
         public ValidateOutput Validate(ValidateInput input)
         {
+            if(HashingService == null)
+            {
+                throw new NullReferenceException("Hashing service was not initialized.");
+            }
             return new ValidateOutput
             {
                 IsSuccess = input.Login.ToLower() == "jan"

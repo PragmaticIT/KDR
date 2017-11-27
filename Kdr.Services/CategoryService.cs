@@ -18,7 +18,11 @@ namespace Kdr.Services
         }
         public CreateCategoryOutput CreateCategory(CreateCategoryInput input)
         {
-            return new CreateCategoryOutput(_categoryRepository.Save(input.Category));
+            if (input == null || !input.IsValid())
+                return new CreateCategoryOutput("Invalid input data");
+            if (_categoryRepository.FindByName(input.Name) != null)
+                return new CreateCategoryOutput("Category name has to be unique");
+            return new CreateCategoryOutput(_categoryRepository.Save(new Core.Category { Name = input.Name }));
         }
 
         public DeleteCategoryOutput DeleteCategory(DeleteCategoryInput input)

@@ -9,5 +9,6 @@ namespace Kdr.ServiceInterfaces.Repositories
 {
     public interface ICategoryRepository : IRepository<Category>
     {
+        Category FindByName(string name);
     }
 }

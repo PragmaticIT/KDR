@@ -4,11 +4,11 @@ namespace Kdr.ServiceInterfaces
 {
     public class CreateCategoryInput
     {
-        public CreateCategoryInput(Category category)
+        public bool IsValid()
         {
-            Category = category;
+                return !string.IsNullOrWhiteSpace(Name);
         }
 
-        public Category Category { get; private set; }
+        public string Name { get; set; }
     }
 }

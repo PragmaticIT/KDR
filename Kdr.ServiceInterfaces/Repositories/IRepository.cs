@@ -13,5 +13,8 @@ namespace Kdr.ServiceInterfaces.Repositories
         bool Delete(T input);
         bool Delete(int id);
         GetPageOutput GetPage(GetPageInput input);
+#if DEBUG
+        IEnumerable<T> GetAll();
+#endif
     }
 }

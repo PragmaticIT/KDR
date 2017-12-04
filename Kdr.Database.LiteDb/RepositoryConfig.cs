@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Kdr.Database.LiteDb
 {
-    public class Class1
+    public class RepositoryConfig : IRepositoryConfig
     {
+        public string DbFilePath { get ; set; }
     }
 }

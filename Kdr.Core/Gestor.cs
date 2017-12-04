@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Kdr.Core
 {
-    public class Gestor
+    public class Gestor : IHasId
     {
         //Nazwa, adres, telefon, kategorie, opis ulgi, opis gestora, 
         //  strona www, mail, logo gestora

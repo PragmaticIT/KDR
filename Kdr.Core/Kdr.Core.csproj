@@ -43,6 +43,7 @@
     <Compile Include="Address.cs" />
     <Compile Include="Category.cs" />
     <Compile Include="Gestor.cs" />
+    <Compile Include="IHasId.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

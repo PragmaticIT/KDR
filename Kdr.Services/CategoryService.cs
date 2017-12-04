@@ -1,4 +1,5 @@
-﻿using Kdr.ServiceInterfaces;
+﻿using Kdr.Core;
+using Kdr.ServiceInterfaces;
 using Kdr.ServiceInterfaces.Repositories;
 using System;
 using System.Collections.Generic;
@@ -32,17 +33,45 @@ namespace Kdr.Services
 
         public EditCategoryOutput EditCategory(EditCategoryInput input)
         {
-            throw new NotImplementedException();
+            if (input == null || !input.IsValid())
+                return new EditCategoryOutput("Invalid input data");
+
+            Category category = _categoryRepository.FindByName(input.Name);
+
+            if (category != null && category.Id != input.Id)
+                return new EditCategoryOutput("Category name has to be unique. Category with this name already exists.");
+            try
+            {
+                category = category ?? _categoryRepository.Get(input.Id);
+            }
+            catch //TODO: Ustalić exeption
+            {
+
+                return new EditCategoryOutput("Non existing Id");
+            }
+
+            category.Name = input.Name;
+
+            return new EditCategoryOutput(_categoryRepository.Save(category));
         }
 
         public GetAllCategoriesOutput GetAllCategories(GetAllCategoriesInput input)
         {
-            throw new NotImplementedException();
+            return new GetAllCategoriesOutput(_categoryRepository.GetAll());
         }
 
         public GetCategoryOutput GetCategory(GetCategoryInput input)
         {
-            throw new NotImplementedException();
+            if (input == null || !input.IsValid())
+                return new GetCategoryOutput("Invalid input data");
+            try
+            {
+                return new GetCategoryOutput(_categoryRepository.Get(input.Id));
+            }
+            catch
+            {
+                return new GetCategoryOutput("Non existing Id");
+            }
         }
     }
 }

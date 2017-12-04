@@ -4,6 +4,10 @@ namespace Kdr.ServiceInterfaces
 {
     public class CreateCategoryOutput
     {
+        public CreateCategoryOutput()
+        {
+        }
+
         public CreateCategoryOutput(Category category)
         {
             Category = category;

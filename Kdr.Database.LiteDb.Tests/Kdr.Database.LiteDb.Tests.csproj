@@ -48,11 +48,21 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="RepositoryBaseTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Kdr.Core\Kdr.Core.csproj">
+      <Project>{C633603A-6376-4DE6-8019-1C56A0E5E85D}</Project>
+      <Name>Kdr.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kdr.Database.LiteDb\Kdr.Database.LiteDb.csproj">
+      <Project>{98de5e1f-e7b9-4404-8b16-4257f4520cb6}</Project>
+      <Name>Kdr.Database.LiteDb</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace Kdr.Database.LiteDb
 {
-    public class RepositoryBase<T> : IRepository<T> where T:IHasId
+    public class RepositoryBase<T> : IDisposable, IRepository<T> where T:IHasId
     {
-        private readonly LiteRepository _repo;
+        protected readonly LiteRepository _repo;
 
         public RepositoryBase(IRepositoryConfig config)
         {
@@ -26,6 +26,11 @@ namespace Kdr.Database.LiteDb
         public bool Delete(int id)
         {
             return _repo.Delete<T>(new BsonValue(id));
+        }
+
+        public void Dispose()
+        {
+            if (_repo != null) _repo.Dispose();
         }
 
         public T Get(int id)

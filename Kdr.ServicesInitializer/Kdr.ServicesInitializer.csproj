@@ -60,6 +60,10 @@
       <Project>{c633603a-6376-4de6-8019-1c56a0e5e85d}</Project>
       <Name>Kdr.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Kdr.Database.LiteDb\Kdr.Database.LiteDb.csproj">
+      <Project>{98DE5E1F-E7B9-4404-8B16-4257F4520CB6}</Project>
+      <Name>Kdr.Database.LiteDb</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Kdr.Database.MongoDB\Kdr.Database.MongoDB.csproj">
       <Project>{586bf81c-45b2-4a55-b845-de5d20232f16}</Project>
       <Name>Kdr.Database.MongoDB</Name>

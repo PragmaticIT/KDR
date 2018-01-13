@@ -1,4 +1,6 @@
-﻿using Kdr.ServiceInterfaces;
+﻿using Kdr.Database.LiteDb;
+using Kdr.ServiceInterfaces;
+using Kdr.ServiceInterfaces.Repositories;
 using Kdr.Services;
 using Microsoft.Practices.Unity;
 using System;
@@ -25,6 +27,8 @@ namespace Kdr.ServicesInitializer
         {
             _container.RegisterType<IAuthService, AuthService>();
             _container.RegisterType<IHashingService, HashingService>();
+            _container.RegisterType<ICategoryService, CategoryService>();
+            _container.RegisterType<ICategoryRepository, CategoryRepository>();
         }
 
         public static object GetInstance(Type type)
